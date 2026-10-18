@@ -73,13 +73,13 @@
         <h2>4. Exports and the clipboard</h2>
         <p>You can export measurement data as JSON and save an annotated screen crop as PNG. Image export shows a preview and lets you choose the display and measurements to include. Each image you successfully save or copy is also kept locally in the session's image log, where you can view, copy, or save it again after finishing. The resulting image can contain private information visible in the crop; review it before saving or sharing. Portable Session JSON contains measurements and notes only, not image files.</p>
         <p>Copy actions place measurement text or an image on the macOS clipboard. Other apps and clipboard features you use, including Universal Clipboard or clipboard managers, may access, synchronize, or retain that content under their own settings.</p>
-        <p>Exported files remain where you save them until you delete them. A location managed by a cloud storage or backup service may synchronize your files. Screen Ruler does not control those services or automatically send exports to the developer. Import reads only the session file you select and saves a local copy in your library.</p>
+        <p>Exported files remain where you save them until you delete them. A location managed by a cloud storage or backup service may synchronize your files. Screen Ruler does not control those services or automatically send exports to the developer.</p>
       </section>
       <section id="permissions">
         <h2>5. macOS permissions</h2>
         <ul>
           <li><strong>Screen Recording:</strong> allows live measurement of pixels from other apps. You can review or revoke access in System Settings → Privacy &amp; Security. The category may be called Screen Recording or Screen &amp; System Audio Recording depending on macOS; Screen Ruler uses only the screen portion.</li>
-          <li><strong>Files you select:</strong> macOS file pickers grant access to the session files you import and export destinations you choose.</li>
+          <li><strong>Export destinations:</strong> macOS file pickers grant access to the locations you choose for exported session data and images.</li>
           <li><strong>Open at login:</strong> an optional setting registers Screen Ruler as a login item. Opening the app at login does not itself begin a screen measurement session.</li>
         </ul>
         <p>The app does not request Accessibility, Input Monitoring, microphone, camera, or Full Disk Access. Its global shortcut and measuring controls process the input needed to operate the app locally.</p>
