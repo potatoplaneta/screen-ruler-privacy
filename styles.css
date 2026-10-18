@@ -1,0 +1,83 @@
+:root {
+  color-scheme: light;
+  --paper: #faf9f5;
+  --ink: #202d2b;
+  --muted: #54625e;
+  --accent: #236251;
+  --line: #d9ded7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 17px; line-height: 1.75; }
+a { color: var(--accent); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+.site-header, .site-footer { width: min(1080px, calc(100% - 64px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-header { min-height: 104px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 650; letter-spacing: -.4px; text-decoration: none; }
+.brand img { display: block; }
+.header-link { font-size: 14px; text-decoration: none; }
+.header-link span, .contact-link span { margin-left: 6px; }
+main { width: min(740px, calc(100% - 48px)); margin: 0 auto; }
+.introduction { padding-top: 76px; }
+.eyebrow { margin: 0 0 16px; color: var(--accent); font-size: 11px; line-height: 1.5; font-weight: 750; letter-spacing: 2px; }
+h1 { margin: 0 0 24px; font-size: clamp(40px, 7vw, 64px); line-height: 1.1; font-weight: 650; letter-spacing: -2.5px; }
+.lead { max-width: 690px; margin: 0 0 25px; color: var(--muted); font-size: 21px; line-height: 1.65; letter-spacing: -.3px; }
+.updated { margin: 0; color: var(--muted); font-size: 13px; }
+.overview { margin: 38px 0 28px; padding: 22px 26px; background: #edf1e9; border-left: 3px solid var(--accent); }
+.overview > p:first-child { margin: 0 0 10px; font-size: 13px; font-weight: 750; color: var(--accent); }
+.overview .contact-note { margin: 12px 0 0; }
+.overview ul { margin: 0; padding-left: 20px; font-size: 15px; }
+.overview li { padding-left: 2px; margin: 4px 0; }
+.contents { display: flex; flex-wrap: wrap; gap: 10px 22px; padding: 0 0 31px; border-bottom: 1px solid var(--line); font-size: 13px; }
+section { padding-top: 38px; scroll-margin-top: 24px; }
+h2 { margin: 0 0 15px; font-size: 24px; font-weight: 650; line-height: 1.35; letter-spacing: -.6px; }
+section p { margin: 0 0 17px; }
+section ul { margin: 0 0 20px; padding-left: 24px; }
+section li { margin: 8px 0; padding-left: 3px; }
+strong { font-weight: 650; }
+code { font-size: .83em; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; background: #eceee8; border-radius: 3px; padding: 2px 4px; overflow-wrap: anywhere; }
+.contact { margin: 39px 0 68px; padding: 30px 0 0; border-top: 1px solid var(--line); }
+.contact .eyebrow { margin-bottom: 12px; }
+.contact-link { display: inline-block; font-weight: 650; }
+.contact-note { margin-top: 12px; color: var(--muted); font-size: 13px; }
+.site-footer { padding: 24px 0 35px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+.skip-link { position: absolute; top: 12px; left: 16px; padding: 8px 12px; z-index: 1; background: var(--paper); transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .site-header, .site-footer { width: calc(100% - 40px); }
+  .site-header { min-height: 85px; gap: 12px; }
+  .brand { font-size: 15px; gap: 9px; }
+  .brand img { width: 29px; height: 29px; }
+  .header-link { font-size: 12px; }
+  main { width: calc(100% - 40px); }
+  .introduction { padding-top: 46px; }
+  h1 { letter-spacing: -1.7px; }
+  .lead { font-size: 18px; }
+  .overview { padding: 18px 20px; }
+  h2 { font-size: 22px; }
+  .contents { gap: 10px 19px; }
+  .site-footer { align-items: flex-start; flex-direction: column; gap: 8px; }
+}
+
+@media print {
+  :root { background: white; color: black; }
+  body { font-size: 11pt; line-height: 1.5; }
+  main { width: 100%; }
+  .site-header, .site-footer, .contents, .skip-link { display: none; }
+  .introduction { padding-top: 0; }
+  h1 { font-size: 30pt; }
+  .lead { font-size: 13pt; }
+  section { padding-top: 18px; }
+  h2 { font-size: 15pt; break-after: avoid; }
+  .overview { break-inside: avoid; }
+  a { color: black; }
+  .contact { margin-bottom: 0; }
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Screen Ruler privacy policy: local screen processing, saved measurements, image exports, permissions, and your privacy choices.">
+    <meta name="color-scheme" content="light">
+    <title>Privacy Policy · Screen Ruler</title>
+    <link rel="canonical" href="https://potatoplaneta.github.io/screen-ruler-privacy/">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#policy">Skip to privacy policy</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Screen Ruler privacy policy home">
+        <img src="app-icon.png" srcset="app-icon.png 1x, app-icon-512.png 2x" alt="" width="36" height="36">
+        <span>Screen Ruler</span>
+      </a>
+      <a class="header-link" href="#contact">Privacy questions <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="policy">
+      <div class="introduction">
+        <p class="eyebrow">YOUR SCREEN. YOUR MAC.</p>
+        <h1>Privacy Policy</h1>
+        <p class="lead">Your screen stays on your Mac. This page explains how Screen Ruler reads pixels, what it saves, and how you stay in control.</p>
+        <p class="updated">Effective and last updated: <time datetime="2026-10-18">October 18, 2026</time></p>
+      </div>
+      <aside class="overview" aria-label="Privacy at a glance">
+        <p>At a glance</p>
+        <ul>
+          <li>Screen images are processed locally and held in memory during a measurement session.</li>
+          <li>Saved sessions contain measurement values, labels, notes, and display information, not screenshots.</li>
+          <li>Images are saved or copied only when you choose an image export action.</li>
+          <li>No account, advertising, third-party analytics SDKs, or developer-operated backend.</li>
+        </ul>
+      </aside>
+      <nav class="contents" aria-label="Policy sections">
+        <a href="#screen">Screen processing</a>
+        <a href="#local-data">Local data</a>
+        <a href="#exports">Exports</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#your-choices">Your choices</a>
+        <a href="#website">Website and support</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <section id="scope">
+        <h2>1. Who this policy covers</h2>
+        <p>This policy applies to the Screen Ruler macOS app and its privacy policy and support website. Screen Ruler is maintained by <a href="https://github.com/potatoplaneta">PotatoPlanetStudios</a>. You do not need a Screen Ruler account to use the app.</p>
+        <p>The app does not upload screen images, measurements, notes, or usage activity to the developer. We do not sell personal data, use advertising trackers, or include third-party analytics SDKs.</p>
+      </section>
+      <section id="screen">
+        <h2>2. Screen processing stays on your Mac</h2>
+        <p>With your macOS Screen Recording permission, Screen Ruler reads visible display pixels to measure boundaries, show a magnified view, and sample colors. A live session covers all connected displays by default; you can also choose a single display. Captured frames can include anything visible on those displays, including content from other apps.</p>
+        <p>Screen images are held in memory. Freeze stops new capture and keeps the current images for measuring. Interact lets you use other apps; capture continues if you entered Interact from Live, and remains paused if you entered from Frozen. Choose Done or quit Screen Ruler to end capture and release the images.</p>
+        <p>The app uses local display and application information to locate displays and exclude its own measuring windows from capture. It does not capture microphone or system audio, record a video, or upload screen content. The practice canvas uses a generated image and needs no Screen Recording access.</p>
+      </section>
+      <section id="local-data">
+        <h2>3. Data stored on your Mac</h2>
+        <p>Screen Ruler saves the information needed to keep your measurements and restore your preferred workspace. This can include:</p>
+        <ul>
+          <li>Session names, dates, identifiers, and notes you enter.</li>
+          <li>Measurement types, coordinates, dimensions, labels, cursor intersections, and pinned state.</li>
+          <li>Display names and identifiers, logical dimensions, and captured image dimensions.</li>
+          <li>Units, detection tolerance, snapping, appearance, tool order, keyboard shortcuts, panel positions, and workspace presets.</li>
+        </ul>
+        <p>Session files are stored in a <code>ScreenRuler</code> folder within the app's local Application Support directory. Preferences and workspace presets are stored separately by macOS. Starting another session, opening another saved session, or quitting preserves the current measurements locally. Saved session files do not contain captured screen images.</p>
+        <p>Screen Ruler has no cloud synchronization service or automatic diagnostic upload. macOS may retain operating-system diagnostics under its own settings. Apple may make diagnostics available through its services according to your Apple privacy settings.</p>
+      </section>
+      <section id="exports">
+        <h2>4. Exports and the clipboard</h2>
+        <p>You can export measurement data as JSON and save an annotated screen crop as PNG. Image export shows a preview and lets you choose the display and measurements to include. The resulting image can contain private information visible in the crop; review it before saving or sharing.</p>
+        <p>Copy actions place measurement text or an image on the macOS clipboard. Other apps and clipboard features you use, including Universal Clipboard or clipboard managers, may access, synchronize, or retain that content under their own settings.</p>
+        <p>Exported files remain where you save them until you delete them. A location managed by a cloud storage or backup service may synchronize your files. Screen Ruler does not control those services or automatically send exports to the developer. Import reads only the session file you select and saves a local copy in your library.</p>
+      </section>
+      <section id="permissions">
+        <h2>5. macOS permissions</h2>
+        <ul>
+          <li><strong>Screen Recording:</strong> allows live measurement of pixels from other apps. You can review or revoke access in System Settings → Privacy &amp; Security. The category may be called Screen Recording or Screen &amp; System Audio Recording depending on macOS; Screen Ruler uses only the screen portion.</li>
+          <li><strong>Files you select:</strong> macOS file pickers grant access to the session files you import and export destinations you choose.</li>
+          <li><strong>Open at login:</strong> an optional setting registers Screen Ruler as a login item. Opening the app at login does not itself begin a screen measurement session.</li>
+        </ul>
+        <p>The app does not request Accessibility, Input Monitoring, microphone, camera, or Full Disk Access. Its global shortcut and measuring controls process the input needed to operate the app locally.</p>
+      </section>
+      <section id="your-choices">
+        <h2>6. Retention, deletion, and your choices</h2>
+        <p>Saved measurements and preferences remain on your Mac until you change or delete them. Uninstalling the app alone may leave its local support files and preferences.</p>
+        <ul>
+          <li><strong>Stop capture:</strong> choose Done, quit the app, or revoke Screen Recording access. Closing the workspace window or choosing Interact does not necessarily end a live session.</li>
+          <li><strong>Remove a measurement:</strong> use its trash button. Deletion is undoable during the current session; save the session to persist the updated collection.</li>
+          <li><strong>Remove a saved session:</strong> use the trash button beside its name in Your sessions and confirm deletion.</li>
+          <li><strong>Clear the local session library:</strong> quit the app first, then remove its <code>ScreenRuler</code> Application Support folder. For the sandboxed app, this is normally <code>~/Library/Containers/com.PotatoPlanetStudios.ScreenRuler/Data/Library/Application Support/ScreenRuler/</code>. Other builds may use <code>~/Library/Application Support/ScreenRuler/</code>.</li>
+          <li><strong>Preferences and presets:</strong> macOS stores these under the app's <code>com.PotatoPlanetStudios.ScreenRuler</code> preferences domain, separately from session files. Contact support for help with a complete local reset.</li>
+          <li><strong>Exports and backups:</strong> deleting a session does not delete exported files, clipboard copies, or backups. Manage those copies in the apps and services where you keep them.</li>
+        </ul>
+        <p>The developer cannot access or remotely delete information held only on your Mac.</p>
+      </section>
+      <section id="website">
+        <h2>7. This website and support requests</h2>
+        <p>These static pages are hosted by GitHub Pages. We have added no analytics scripts, tracking cookies, external fonts, or contact forms. GitHub receives information needed to serve the pages, such as your IP address and request metadata, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Opening a support or policy link from the app uses your browser.</p>
+        <p>If you email <a href="mailto:potatoplanet.studios@gmail.com">potatoplanet.studios@gmail.com</a>, we receive your email address, message, and any attachments you choose to send. We use them to respond and troubleshoot. Correspondence may remain in the support mailbox until deleted; you can request deletion of messages we control. Our Gmail mailbox is provided by Google, whose processing is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Email services may retain copies under their own policies.</p>
+        <p>GitHub Issues are public and require a GitHub account. Your username and issue content are visible to others and remain on GitHub until removed, subject to GitHub's retention policies. You may edit or delete content where GitHub permits, or ask us for help removing content we control.</p>
+        <p><strong>Do not post unredacted screenshots, private session notes, personal information, or private file paths in a public issue.</strong> Use email for private requests and share only what is needed to answer your question.</p>
+      </section>
+      <section id="changes">
+        <h2>8. Changes to this policy</h2>
+        <p>We may update this policy when the app or its privacy practices change. The current version will remain at this address with the updated date shown above.</p>
+      </section>
+      <section id="contact" class="contact">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>9. Privacy questions</h2>
+        <p>For questions about this policy, privacy choices, or deleting local data, email <a href="mailto:potatoplanet.studios@gmail.com?subject=Screen%20Ruler%20privacy">potatoplanet.studios@gmail.com</a>. General app help is available on our <a href="support.html">support page</a>.</p>
+        <a class="contact-link" href="https://github.com/potatoplaneta/screen-ruler-privacy/issues/new?title=Privacy%20question">Open a privacy question on GitHub <span aria-hidden="true">↗</span></a>
+        <p class="contact-note">GitHub Issues are public. Use email for private requests.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Screen Ruler · Privacy Policy</span>
+      <div class="footer-links">
+        <a href="support.html">Support <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/potatoplaneta/screen-ruler-privacy">View page source <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
