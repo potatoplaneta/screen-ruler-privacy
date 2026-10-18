@@ -11,7 +11,7 @@ Public privacy policy and support pages for the Screen Ruler macOS app by Potato
 
 GitHub Pages serves the root of `main`. No build step, dependencies, JavaScript, external fonts, or analytics are required. `.nojekyll` enables static hosting. Push changes to `main` to publish.
 
-`styles.css` is unchanged from the Audio Router and Wheel Launcher privacy sites. The PNG artwork is exported from Screen Ruler's existing app icon: `app-icon.png` (256 px), `app-icon-512.png` (512 px), and 16/32 px favicons. Both pages use local assets only.
+`styles.css` is unchanged from the Audio Router and Wheel Launcher privacy sites. The PNG artwork is exported from Screen Ruler's selected Datum app icon (original concept 1): `app-icon.png` (256 px), `app-icon-512.png` (512 px), and 16/32 px favicons. Both pages use local assets only.
 
 For local preview, run `python3 -m http.server 8789 --bind 127.0.0.1` and open http://127.0.0.1:8789/.
 
