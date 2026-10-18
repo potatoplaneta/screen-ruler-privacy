@@ -31,7 +31,7 @@
         <p>At a glance</p>
         <ul>
           <li>Screen images are processed locally and held in memory during a measurement session.</li>
-          <li>Saved sessions contain measurement values, labels, notes, and display information, not screenshots.</li>
+          <li>Saved sessions contain measurement values, labels, notes, display information, and local copies of images you explicitly export or copy.</li>
           <li>Images are saved or copied only when you choose an image export action.</li>
           <li>No account, advertising, third-party analytics SDKs, or developer-operated backend.</li>
         </ul>
@@ -53,7 +53,7 @@
       <section id="screen">
         <h2>2. Screen processing stays on your Mac</h2>
         <p>With your macOS Screen Recording permission, Screen Ruler reads visible display pixels to measure boundaries, show a magnified view, and sample colors. A live session covers all connected displays by default; you can also choose a single display. Captured frames can include anything visible on those displays, including content from other apps.</p>
-        <p>Screen images are held in memory. Freeze stops new capture and keeps the current images for measuring. Interact lets you use other apps; capture continues if you entered Interact from Live, and remains paused if you entered from Frozen. Choose Done or quit Screen Ruler to end capture and release the images.</p>
+        <p>Full-screen captures are held in memory. Freeze stops new capture and keeps the current images for measuring. Interact lets you use other apps; capture continues if you entered Interact from Live, and remains paused if you entered from Frozen. Choose Done or quit Screen Ruler to end capture and release those full-screen images. Only image crops you explicitly export or copy are retained with the session.</p>
         <p>The app uses local display and application information to locate displays and exclude its own measuring windows from capture. It does not capture microphone or system audio, record a video, or upload screen content. The practice canvas uses a generated image and needs no Screen Recording access.</p>
       </section>
       <section id="local-data">
@@ -63,14 +63,15 @@
           <li>Session names, dates, identifiers, and notes you enter.</li>
           <li>Measurement types, coordinates, dimensions, labels, cursor intersections, and pinned state.</li>
           <li>Display names and identifiers, logical dimensions, and captured image dimensions.</li>
-          <li>Units, detection tolerance, snapping, appearance, tool order, keyboard shortcuts, panel positions, and workspace presets.</li>
+          <li>Units, detection tolerance, snapping, appearance, tool order, keyboard shortcuts, and panel positions.</li>
+          <li>The exact annotated PNG crops you export or copy, with their filenames, dimensions, timestamps, and whether they were saved or copied.</li>
         </ul>
-        <p>Session files are stored in a <code>ScreenRuler</code> folder within the app's local Application Support directory. Preferences and workspace presets are stored separately by macOS. Starting another session, opening another saved session, or quitting preserves the current measurements locally. Saved session files do not contain captured screen images.</p>
+        <p>Session files are stored in a <code>ScreenRuler</code> folder within the app's local Application Support directory. Retained PNG crops are stored in its <code>Images</code> subfolder, grouped by session. Preferences are stored separately by macOS. Starting another session, opening another saved session, finishing, or quitting preserves the current measurements and image log locally. Screen images that you have not exported or copied are not retained.</p>
         <p>Screen Ruler has no cloud synchronization service or automatic diagnostic upload. macOS may retain operating-system diagnostics under its own settings. Apple may make diagnostics available through its services according to your Apple privacy settings.</p>
       </section>
       <section id="exports">
         <h2>4. Exports and the clipboard</h2>
-        <p>You can export measurement data as JSON and save an annotated screen crop as PNG. Image export shows a preview and lets you choose the display and measurements to include. The resulting image can contain private information visible in the crop; review it before saving or sharing.</p>
+        <p>You can export measurement data as JSON and save an annotated screen crop as PNG. Image export shows a preview and lets you choose the display and measurements to include. Each image you successfully save or copy is also kept locally in the session's image log, where you can view, copy, or save it again after finishing. The resulting image can contain private information visible in the crop; review it before saving or sharing. Portable Session JSON contains measurements and notes only, not image files.</p>
         <p>Copy actions place measurement text or an image on the macOS clipboard. Other apps and clipboard features you use, including Universal Clipboard or clipboard managers, may access, synchronize, or retain that content under their own settings.</p>
         <p>Exported files remain where you save them until you delete them. A location managed by a cloud storage or backup service may synchronize your files. Screen Ruler does not control those services or automatically send exports to the developer. Import reads only the session file you select and saves a local copy in your library.</p>
       </section>
@@ -85,14 +86,14 @@
       </section>
       <section id="your-choices">
         <h2>6. Retention, deletion, and your choices</h2>
-        <p>Saved measurements and preferences remain on your Mac until you change or delete them. Uninstalling the app alone may leave its local support files and preferences.</p>
+        <p>Saved measurements, session images, and preferences remain on your Mac until you change or delete them. Uninstalling the app alone may leave its local support files and preferences.</p>
         <ul>
           <li><strong>Stop capture:</strong> choose Done, quit the app, or revoke Screen Recording access. Closing the workspace window or choosing Interact does not necessarily end a live session.</li>
           <li><strong>Remove a measurement:</strong> use its trash button. Deletion is undoable during the current session; save the session to persist the updated collection.</li>
-          <li><strong>Remove a saved session:</strong> use the trash button beside its name in Your sessions and confirm deletion.</li>
+          <li><strong>Remove a saved session:</strong> use the trash button beside its name in Your sessions and confirm deletion. This removes its measurements, notes, and locally retained image crops. Delete all sessions removes the saved library after confirmation.</li>
           <li><strong>Clear the local session library:</strong> quit the app first, then remove its <code>ScreenRuler</code> Application Support folder. For the sandboxed app, this is normally <code>~/Library/Containers/com.PotatoPlanetStudios.ScreenRuler/Data/Library/Application Support/ScreenRuler/</code>. Other builds may use <code>~/Library/Application Support/ScreenRuler/</code>.</li>
-          <li><strong>Preferences and presets:</strong> macOS stores these under the app's <code>com.PotatoPlanetStudios.ScreenRuler</code> preferences domain, separately from session files. Contact support for help with a complete local reset.</li>
-          <li><strong>Exports and backups:</strong> deleting a session does not delete exported files, clipboard copies, or backups. Manage those copies in the apps and services where you keep them.</li>
+          <li><strong>Preferences:</strong> macOS stores these under the app's <code>com.PotatoPlanetStudios.ScreenRuler</code> preferences domain, separately from session files. Older builds' custom preset data may remain in that domain but is no longer used. Contact support for help with a complete local reset.</li>
+          <li><strong>Exports and backups:</strong> deleting a session removes its local image log but does not delete files exported to other locations, clipboard copies, or backups. Manage those separate copies in the apps and services where you keep them.</li>
         </ul>
         <p>The developer cannot access or remotely delete information held only on your Mac.</p>
       </section>
