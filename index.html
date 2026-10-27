@@ -25,7 +25,7 @@
         <p class="eyebrow">YOUR SCREEN. YOUR MAC.</p>
         <h1>Privacy Policy</h1>
         <p class="lead">Your screen stays on your Mac. This page explains how PixelBounds reads pixels, what it saves, and how you stay in control.</p>
-        <p class="updated">Effective and last updated: <time datetime="2026-10-18">October 18, 2026</time></p>
+        <p class="updated">Effective and last updated: <time datetime="2026-10-28">October 28, 2026</time></p>
       </div>
       <aside class="overview" aria-label="Privacy at a glance">
         <p>At a glance</p>
@@ -33,7 +33,7 @@
           <li>Screen images are processed locally and held in memory during a measurement session.</li>
           <li>Saved sessions contain measurement values, labels, notes, display information, and local copies of images you explicitly export or copy.</li>
           <li>Images are saved or copied only when you choose an image export action.</li>
-          <li>No account, advertising, third-party analytics SDKs, or developer-operated backend.</li>
+          <li>No PixelBounds account, advertising, third-party analytics SDKs, or developer-operated backend. Trial activation and purchases use Apple’s App Store.</li>
         </ul>
       </aside>
       <nav class="contents" aria-label="Policy sections">
@@ -68,6 +68,10 @@
         </ul>
         <p>Session files are stored in a <code>ScreenRuler</code> folder within the app's local Application Support directory. Retained PNG crops are stored in its <code>Images</code> subfolder, grouped by session. Preferences are stored separately by macOS. Starting another session, opening another saved session, finishing, or quitting preserves the current measurements and image log locally. Screen images that you have not exported or copied are not retained.</p>
         <p>PixelBounds has no cloud synchronization service or automatic diagnostic upload. macOS may retain operating-system diagnostics under its own settings. Apple may make diagnostics available through its services according to your Apple privacy settings.</p>
+        <h3>Trial activation and purchases</h3>
+        <p>The optional free 7-day trial and permanent full-version purchase use Apple’s App Store through StoreKit. Apple processes account and payment information under its <a href="https://www.apple.com/legal/privacy/data/en/app-store/">App Store &amp; Privacy policy</a>. PixelBounds does not receive your payment-card details or Apple Account password.</p>
+        <p>The app checks Apple-verified transaction information on your Mac, including the product, original purchase date, and revocation status, to determine access and restore purchases. It also stores a last-observed date in local preferences to prevent an ordinary clock rollback from extending the trial. The app does not send these records to a developer-operated server. Apple may provide sales and financial reports through App Store Connect.</p>
+        <p>The local date remains until the app’s preferences are removed. Deleting local sessions or preferences does not delete Apple’s purchase records or restart the trial. Apple controls its transaction retention and refund handling; see its policy above for details.</p>
       </section>
       <section id="exports">
         <h2>4. Exports and the clipboard</h2>
@@ -89,6 +93,7 @@
         <p>Saved measurements, session images, and preferences remain on your Mac until you change or delete them. Uninstalling the app alone may leave its local support files and preferences.</p>
         <ul>
           <li><strong>Stop capture:</strong> choose Done, quit the app, or revoke Screen Recording access. Closing the workspace window or choosing Interact does not necessarily end a live session.</li>
+          <li><strong>Discard the active session:</strong> Escape first clears the selected measurement; pressing it with nothing selected discards the active session, including any library copy and retained crops. Separately exported files and clipboard copies remain.</li>
           <li><strong>Remove a measurement:</strong> use its trash button. Deletion is undoable during the current session; save the session to persist the updated collection.</li>
           <li><strong>Remove a saved session:</strong> use the trash button beside its name in Your sessions and confirm deletion. This removes its measurements, notes, and locally retained image crops. Delete all sessions removes the saved library after confirmation.</li>
           <li><strong>Clear the local session library:</strong> quit the app first, then remove its <code>ScreenRuler</code> Application Support folder. For the sandboxed app, this is normally <code>~/Library/Containers/com.PotatoPlanetStudios.ScreenRuler/Data/Library/Application Support/ScreenRuler/</code>. Other builds may use <code>~/Library/Application Support/ScreenRuler/</code>.</li>
